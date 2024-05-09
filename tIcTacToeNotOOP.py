@@ -14,6 +14,8 @@ board_size = 3
 button_board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 # board for storing where symbols have actually been placed ya know
 tracking_board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+# when True stop game
+stop_game = False
 
 
 # creating gui grid from button_board
@@ -36,7 +38,26 @@ def clicked(r, c):
         # print(f"{r}, {c}")
         button_board[r][c].configure(text="X")
         tracking_board[r][c] = "X"
-        print(tracking_board)
+
+    check_for_win()
+
+
+def check_for_win():
+    global stop_game
+
+    for tiles in range(board_size):
+
+        if tracking_board[tiles][0] == tracking_board[tiles][1] == tracking_board[tiles][2] != 0:
+            stop_game = True
+            print('game over condition 1')
+            break
+        
+        if tracking_board[0][tiles] == tracking_board[1][tiles] == tracking_board[2][tiles] != 0:
+            stop_game = True
+            print('game over, condition 2')
+            break
+        
+        if tracking_board[]
 
 
 # print(tracking_board)
