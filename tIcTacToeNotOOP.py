@@ -7,19 +7,18 @@ root = Tk()
 root.title("tic tac toe")
 root.resizable(0, 0)
 # what symbol is put onto the board when when player clicks
-player_symbol = "O"
+player_symbol = "X"
 # meant for naming conventions
 board_size = 3
-# template for board?
-board = [[0] * board_size] * board_size
 # board for actually displaying buttons
-button_board = board
+button_board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 # board for storing where symbols have actually been placed ya know
-tracking_board = board
+tracking_board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 
 
 # creating gui grid from button_board
 for i in range(board_size):
+    # print(tracking_board)
     for j in range(board_size):
         button_board[i][j] = Button(
             height=2,
@@ -32,11 +31,15 @@ for i in range(board_size):
 
 # function to comunicate where buttons been pressed
 def clicked(r, c):
-    print(f"{r}, {c}")
+
+    if tracking_board[r][c] == 0:
+        # print(f"{r}, {c}")
+        button_board[r][c].configure(text="X")
+        tracking_board[r][c] = "X"
+        print(tracking_board)
 
 
-print(tracking_board)
+# print(tracking_board)
+# print(button_board)
 
 mainloop()
-
-# what
