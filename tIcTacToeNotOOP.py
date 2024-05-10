@@ -39,44 +39,44 @@ def clicked(r, c):
         button_board[r][c].configure(text="X")
         tracking_board[r][c] = "X"
 
-    check_for_win()
+    check_for_win(r, c)
     opponent_move()
 
 
-def check_for_win():
+def check_for_win(x_tile, y_tile):
     global stop_game
 
-    for tiles in range(board_size):
+    # for tiles in range(board_size):
 
-        if (
-            tracking_board[tiles][0]
-            == tracking_board[tiles][1]
-            == tracking_board[tiles][2]
-            != 0
-        ):
-            stop_game = True
-            print("game over condition 1")
-            break
+    if (
+        tracking_board[x_tile][0]
+        == tracking_board[x_tile][1]
+        == tracking_board[x_tile][2]
+        != 0
+    ):
+        stop_game = True
+        print("game over condition 1")
+        # break
 
-        if (
-            tracking_board[0][tiles]
-            == tracking_board[1][tiles]
-            == tracking_board[2][tiles]
-            != 0
-        ):
-            stop_game = True
-            print("game over, condition 2")
-            break
+    if (
+        tracking_board[0][y_tile]
+        == tracking_board[1][y_tile]
+        == tracking_board[2][y_tile]
+        != 0
+    ):
+        stop_game = True
+        print("game over, condition 2")
+        # break
 
-        if tracking_board[0][0] == tracking_board[1][1] == tracking_board[2][2] != 0:
-            stop_game = True
-            print("game over condition 2")
-            break
+    if tracking_board[0][0] == tracking_board[1][1] == tracking_board[2][2] != 0:
+        stop_game = True
+        print("game over condition 2")
+        # break
 
-        if tracking_board[0][2] == tracking_board[1][1] == tracking_board[2][0] != 0:
-            stop_game = True
-            print("game over condition 3")
-            break
+    if tracking_board[0][2] == tracking_board[1][1] == tracking_board[2][0] != 0:
+        stop_game = True
+        print("game over condition 3")
+        # break
 
     no_symbol = 0
     # this is to verify a tie, should check for tie some better way in a seperate function prolly
@@ -99,8 +99,8 @@ def opponent_move():
         if tracking_board[x_tile][y_tile] == 0:
             button_board[x_tile][y_tile].configure(text="O")
             tracking_board[x_tile][y_tile] = "O"
+            check_for_win(x_tile, y_tile)
             break
-    check_for_win()
 
 
 # print(tracking_board)
