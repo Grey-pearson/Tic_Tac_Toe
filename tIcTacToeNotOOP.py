@@ -57,8 +57,18 @@ def check_for_win():
             print('game over, condition 2')
             break
         
-        if tracking_board[]
-
+        if tracking_board[0][0] == tracking_board[1][1] == tracking_board[2][2] != 0:
+            stop_game = True
+            print('game over condition 2')
+        
+        if tracking_board[0][2] == tracking_board[1][1] == tracking_board[2][0] != 0:
+            stop_game = True
+            print('game over condition 3')
+        
+    # this is to verify a tie, should check for tie some better way in a seperate function prolly
+    for tiles_x in range(board_size):
+        for tiles_x in range(board_size):
+            if tracking_board[tile]
 
 # print(tracking_board)
 # print(button_board)
