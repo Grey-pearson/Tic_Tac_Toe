@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox
 import random
 
 
@@ -55,6 +56,7 @@ def check_for_win(x_tile, y_tile):
         != 0
     ):
         stop_game = True
+        winner = messagebox.showinfo("Winner ", tracking_board[x_tile][0] + " won")
         print("game over condition 1")
         # break
 
@@ -65,16 +67,19 @@ def check_for_win(x_tile, y_tile):
         != 0
     ):
         stop_game = True
+        winner = messagebox.showinfo("Winner ", tracking_board[x_tile][0] + " won")
         print("game over, condition 2")
         # break
 
     if tracking_board[0][0] == tracking_board[1][1] == tracking_board[2][2] != 0:
         stop_game = True
+        winner = messagebox.showinfo("Winner ", tracking_board[x_tile][0] + " won")
         print("game over condition 2")
         # break
 
     if tracking_board[0][2] == tracking_board[1][1] == tracking_board[2][0] != 0:
         stop_game = True
+        winner = messagebox.showinfo("Winner ", tracking_board[x_tile][0] + " won")
         print("game over condition 3")
         # break
 
@@ -86,6 +91,7 @@ def check_for_win(x_tile, y_tile):
                 no_symbol += 1
     if no_symbol == 0:
         stop_game = True
+        winner = messagebox.showinfo("Winner ", tracking_board[x_tile][0] + " won")
         print("game over condition 4")
 
 
