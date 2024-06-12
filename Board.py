@@ -10,7 +10,6 @@ class Board(tk.Tk):
         self.board_size = 3
         self.button_board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
         self.tracking_board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
-        self.mainloop()
 
     def create_board(self):
         for r in range(self.board_size):
