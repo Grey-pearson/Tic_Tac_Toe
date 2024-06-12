@@ -1,5 +1,4 @@
 from tkinter import *
-import ticTacButton as TicTacButton
 
 # button = Button(
 #     height=2,
