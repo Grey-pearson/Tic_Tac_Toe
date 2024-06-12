@@ -29,6 +29,7 @@ class TicTacButton(tk.Tk):
             height=2,
             width=4,
             font=("Ariel", "20"),
+            bootstyle=SUCCESS ,
             command=lambda r=self.row, c=self.column: self.clicked(r, c),
         )
 
