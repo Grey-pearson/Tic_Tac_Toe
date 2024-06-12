@@ -25,7 +25,7 @@ class TicTacButton:
 
         self.row = row
         self.column = column
-        self.button = Button(
+        self.button = tk.Button(
             height=2,
             width=4,
             font=("Ariel", "20"),
