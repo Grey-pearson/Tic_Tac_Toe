@@ -24,10 +24,10 @@ class TicTacButton(tk.Tk):
 
         self.row = row
         self.column = column
-        self.button = tk.Button(
-            height=2,
-            width=4,
-            font=("Ariel", "20"),
+        self.button = ttk.Button(
+            # height=2,
+            # width=4,
+            # font=("Ariel", "20"),
             bootstyle=SUCCESS ,
             command=lambda r=self.row, c=self.column: self.clicked(r, c),
         )
