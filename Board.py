@@ -1,14 +1,8 @@
-from tkinter import *
+import tkinter as tk
+import ttkbootstrap as ttk
+from ttkbootstrap.constants import *
 
-# button = Button(
-#     height=2,
-#     width=4,
-#     font=("Ariel", "20"),
-#     command=lambda r=i, c=j: clicked(r, c),
-# )
-
-
-class Board(Tk):
+class Board():
     def __init__(self):
         super().__init__()
         self.title("tic tac toe")
