@@ -2,7 +2,7 @@ import tkinter as tk
 import ttkbootstrap as ttk
 from ttkbootstrap.constants import *
 
-class Board():
+class Board(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("tic tac toe")
