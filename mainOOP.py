@@ -1,7 +1,7 @@
-from tkinter import *
-from ticTacButton import TicTacButton
-from board import Board
+import tkinter as tk
+import ttkbootstrap as ttk
+from ttkbootstrap.constants import *
 
-board = Board()
+# board = Board()
 
-board.create_board()
+# board.create_board()
