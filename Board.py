@@ -15,7 +15,7 @@ class Board(tk.Tk):
         for r in range(self.board_size):
             for c in range(self.board_size):
                 self.button_board[r][c] = TicTacButton(r, c)
-        self.button_board[r][c].grid(row=r, column=c)
+        self.button_board[r][c].grid()
 
 
 
