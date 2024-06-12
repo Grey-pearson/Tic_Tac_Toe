@@ -20,7 +20,7 @@ class Board(tk.Tk):
 
 
 
-class TicTacButton:
+class TicTacButton(tk.Tk):
     def __init__(self, row, column):
 
         self.row = row
