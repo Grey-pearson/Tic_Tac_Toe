@@ -7,6 +7,8 @@ root = tk.Tk()
 
 board = Board()
 
+# button = ttk.Button(bootstyle="success")
+
 board.create_board()
 
 root.mainloop()
